@@ -1,3 +1,11 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<script type="text/javascript" src="{% static 'polls/min.js' %}"></script>
+<script type="text/javascript" src="{% static 'polls/alphabet.js' %}"></script>   
+
+<canvas id="myCanvas"></canvas>
+<abc>
 {% if latest_poll_list %}
     <ul>
     {% for poll in latest_poll_list %}
@@ -8,3 +16,6 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+</abc>
+<script type="text/javascript" src="{% static 'polls/bubbles.js' %}"></script>
+<script type="text/javascript" src="{% static 'polls/main.js' %}"></script>
