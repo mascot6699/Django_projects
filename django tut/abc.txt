@@ -1,0 +1,1 @@
+http://sebastiandahlgren.se/2012/11/13/using-celery-for-asynchronous-messages-in-django/
