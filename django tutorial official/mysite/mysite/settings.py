@@ -65,7 +65,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = '/polls/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = ("C:/Users/Umang/Documents/try/mysite/polls/static",

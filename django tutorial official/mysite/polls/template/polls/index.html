@@ -1,11 +1,12 @@
 {% load staticfiles %}
-
+<p> its not working </p>
+<p>dfghjkl</p>
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
-<script type="text/javascript" src="{% static 'polls/min.js' %}"></script>
-<script type="text/javascript" src="{% static 'polls/alphabet.js' %}"></script>   
 
-<canvas id="myCanvas"></canvas>
+<!-- <canvas id="myCanvas"></canvas> -->
+
 <abc>
+<p> The list of polls are : </p> 
 {% if latest_poll_list %}
     <ul>
     {% for poll in latest_poll_list %}
@@ -16,6 +17,21 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+<!-- <div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=333307810151570&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-share-button" data-href="/polls/{{ poll.id }}/" data-type="button_count"></div>
+ -->
 </abc>
+<script type="text/javascript" src="{% static 'polls/min.js' %}"></script>
+<script type="text/javascript" src="{% static 'polls/alphabet.js' %}"></script>   
 <script type="text/javascript" src="{% static 'polls/bubbles.js' %}"></script>
 <script type="text/javascript" src="{% static 'polls/main.js' %}"></script>
