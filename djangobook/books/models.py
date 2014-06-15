@@ -30,4 +30,4 @@ class Book(models.Model):
 		return self.title
 
 	class Meta:
-		ordering = ["name"]
+		ordering = ["title"]
