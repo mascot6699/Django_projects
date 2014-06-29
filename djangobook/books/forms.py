@@ -1,4 +1,8 @@
 from django import forms
+from django import forms
+from django.forms import ModelForm
+from books.models import *
+
 
 
 
@@ -19,3 +23,7 @@ class ContactForm(forms.Form):
 		if num_words < 4:
 			raise forms.ValidationError("Not enough words!")
 		return message
+
+class PublisherForm(ModelForm):
+		class Meta:
+			model       = Publisher
