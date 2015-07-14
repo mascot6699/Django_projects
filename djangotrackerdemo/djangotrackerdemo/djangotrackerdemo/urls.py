@@ -6,5 +6,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'djangotrackerdemo.views.home', name='home'),
     url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^tracking/', include('tracking.urls')),
+    # url(r'^tracking/', include('tracking.urls')),
 )

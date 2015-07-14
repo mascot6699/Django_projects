@@ -36,18 +36,23 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tracking',
-    'blog'
+    # 'tracking',
+    # 'activeusers',
+    'visitor',
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (
 
-    'tracking.middleware.VisitorTrackingMiddleware',
+    # 'tracking.middleware.VisitorTrackingMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'activeusers.middleware.VisitorTrackingMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+
+    'visitor.middleware.VisitorMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -86,4 +91,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TRACK_REFERER = True
+
+TEMPLATE_CONTEXT_PROCESSOR = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    "django.core.context_processors.request",
+)
