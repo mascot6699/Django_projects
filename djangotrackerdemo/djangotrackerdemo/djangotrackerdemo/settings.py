@@ -36,23 +36,20 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'tracking',
+    'tracking',
     # 'activeusers',
-    'visitor',
+    # 'visitor',
     'blog',
 )
 
 MIDDLEWARE_CLASSES = (
 
-    # 'tracking.middleware.VisitorTrackingMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    # 'activeusers.middleware.VisitorTrackingMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-
-    'visitor.middleware.VisitorMiddleware',
+    'tracking.middleware.VisitorTrackingMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -102,3 +99,6 @@ TEMPLATE_CONTEXT_PROCESSOR = (
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request",
 )
+
+import logging
+logging.basicConfig(filename='tracking.log', level=logging.DEBUG)
