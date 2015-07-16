@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+{% block title %}Welcome to Django{% endblock %}
+
+{% block head%}
+    Heading
+    <meta charset="utf-8">
+    <script src = "/static/ckeditor/ckeditor/ckeditor.js"></script>
+{% endblock%}
+
+{% block content %}
+    <p>Welcome {{user.username }}!!!</p>
+
+    <form>
+        {{ckform.media}}
+        This is the text area here
+        {{ckform.as_p}}
+    </form>
+
+<!-- This is the code for adding a custom CKEditor via js files.
+custom/ckeditor_1.js is the js for custom CKEditor -->
+
+    <form>
+        <textarea name=" editor1" id = "editor1" rows="30" cols="60">
+            The other text area wih editor 1
+        </textarea>
+    </form>
+
+    <script src = "/static/custom/ckeditor_1.js" ></script>
+
+
+    <a href="/logout/">Logout</a>
+{% endblock %}
+
