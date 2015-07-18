@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^complete/$', complete, name="complete"),
     url(r'^connect/$', connect, name="connect"),
     url(r'^track/$', track, name="track"),
+    url(r'^about/$', about, name="about"),
+
 
 ]
 

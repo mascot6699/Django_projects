@@ -1,0 +1,19 @@
+{% load threadedcomments_tags %}
+
+<html>
+<head><title>{{ post.title }}</title></head>
+<body>
+    <div id="blogpost">
+        <h1>{{ post.title }}</h1>
+        <h3>Posted On: {{ post.date_posted|date }}</h3>
+        {{ post.body|linebreaks }}
+    </div>
+    <h3>Comments on This Post:</h3>
+
+
+<h2>Comments for {{ object.title }}:</h2>
+
+{% render_comment_list for object %}
+{% render_comment_form for object %}
+</body>
+</html>

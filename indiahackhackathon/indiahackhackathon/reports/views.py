@@ -33,3 +33,7 @@ def connect(request):
 
 def track(request):
     return render(request, 'reports/underconstruction.html')
+
+def about(request):
+    return render(request, 'reports/about.html')
+

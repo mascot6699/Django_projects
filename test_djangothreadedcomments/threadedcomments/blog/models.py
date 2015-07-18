@@ -11,6 +11,3 @@ class BlogPost(models.Model):
 
     def __unicode__(self):
         return self.title
-
-    class Admin:
-        prepopulated_fields = {"slug": ("title",)}
