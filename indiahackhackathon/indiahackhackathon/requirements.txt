@@ -1,0 +1,5 @@
+Django==1.8.3
+argparse==1.2.1
+djutil==0.2
+djutils==0.3.2
+wsgiref==0.1.2
