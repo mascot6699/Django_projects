@@ -127,15 +127,12 @@ class VisitorTrackingMiddleware(object):
 
         # if the visitor record is new, or the visitor hasn't been here for
         # at least an hour, update their referrer URL
-
-
-
         visitor.last_update = now
         try:
             visitor.save()
 
             try:
-                visitorurl, created = VisitorsUrls.objects.get_or_create(visitor = visitor, url = request.path)
+                visitorurl, created = VisitorsUrls.objects.get_or_create(visitor=visitor, url=request.path)
                 visitorurl.page_views += 1
                 visitorurl.save()
             except Exception as e:

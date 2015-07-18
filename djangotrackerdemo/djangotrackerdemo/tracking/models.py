@@ -43,7 +43,7 @@ class Visitor(models.Model):
     user = models.ForeignKey(User, null=True)
     user_agent = models.CharField(max_length=255)
     referrer = models.CharField(max_length=255)
-    session_start = models.DateTimeField(blank=True,null=True)
+    session_start = models.DateTimeField(blank=True, null=True)
     last_update = models.DateTimeField(blank=True, null=True)
 
     objects = VisitorManager()
@@ -107,9 +107,7 @@ class Visitor(models.Model):
     geoip_data_json = property(_get_geoip_data_json)
 
     def __str__(self):
-        return "{}/{}".format(self.ip_address,
-                                        self.session_key)
-
+        return "{}/{}".format(self.ip_address, self.session_key)
 
     class Meta:
         ordering = ('-last_update',)
