@@ -22,6 +22,8 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name="home"),
     url(r'^submitreport/$', submit, name="submit-report"),
+    url(r'^complete/$', complete, name="complete"),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -1,36 +1,8 @@
-{% extends "reports/base.html" %}
-{% load crispy_forms_tags %}
-
-{% block title %} {% endblock %}
-
-
-
-
-{% block css %}
-
-<style>
-
-    .form1{
-        height: auto;
-        width: 400px;
-        padding: 40px 40px;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        background-color: #f7f7f7;
-        margin: 50 auto;
-
-    }
-
-    .heading1{
-              text-align: center;
-    }
-
-    .controls{
-        width: 300px;
-
-    }
-
-</style>
-
+<html>
+  <head>
+    <title>Place Autocomplete Address Form</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -67,7 +39,7 @@ function fillInAddress() {
   var place = autocomplete.getPlace();
     lat_long =  place.geometry.location.lat() + '|' + place.geometry.location.lng();
     alert(lat_long);
-    $('#location').val = "lat_long";
+    $('#autocomplete').val = "lat_long";
 
 
 
@@ -95,33 +67,13 @@ function geolocate() {
     </script>
 
 
+  </head>
 
-{% endblock %}
-
-<!--{% block main %}-->
-<body onload="initialize()">
-<div class="heading1">
-<h2> File a report</h2>
-</div>
-<div class="form1 ">
-<form action="/submitreport/" method="post">
-    {% csrf_token %}
-
-    <label> Place where incident took place <br></label>
-    <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()"  type="text">
+   <body onload="initialize()">
+    <div id="locationField">
+      <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()"  type="text">
+    </div>
 
 
-
-    {{ form|crispy }}
-
-    <input type="submit" value="Submit" />
-</form>
-</div>
-<script type="text/javascript">
-    $(document).ready(function(){
-      $('.datepicker').datepicker();
-    })</script>
-
-
-</body>
-<!--{% endblock %}-->
+  </body>
+</html>
