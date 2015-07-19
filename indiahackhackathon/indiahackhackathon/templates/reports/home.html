@@ -1,29 +1,121 @@
 {% extends "reports/base.html" %}
 
 
-{% block title %}
+{% block title %} Home | Zariya {% endblock %}
 
-Home | Himmat
+{% block css %}
+    <style>
+
+    .body{
+        font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    }
+
+    .marketing-hero {
+      margin-top: 20px;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .marketing-hero-heading {
+      color: #205081;
+      font-family: LLCircularWeb-Bold,sans-serif;
+      font-size: 60px;
+      letter-spacing: -1px;
+    }
+
+    .marketing-hero-subheading {
+      color: #999;
+      font-size: 32px;
+      margin-top: 20px;
+    }
+
+    .marketing-hero-cta {
+        margin-top: 40px;
+    }
+
+    .marketing-hero-subtext {
+      color: #a9a9a9;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+
+    .cta-link {
+      display: inline-block;
+      background-color: #67ab49;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+
+    hr {
+      margin-bottom: -20px;
+      border: 0;
+      border-top: 5px solid #eee;
+    }
+
+    </style>
 
 {% endblock %}
+
+{
 
 
 {% block main %}
 
-<div style="">
+<div class="marketing-hero">
+      <div class="marketing-hero-inner">
+        <hgroup>
+          <h2 class="marketing-hero-heading">
+            Take the first step to exercise your rights
+          </h2>
+          <h3 class="marketing-hero-subheading">
+            Report anonymously and safely an incident of wrong doing or violence against women
+          </h3>
+          <p class="marketing-hero-cta">
+            <a class="cta-link" href="/submitreport/" > Report </a>
+          </p>
+          <p class="marketing-hero-subtext">
+                Zariya encourages women to report the wrong doings and violence they face in day to day life<br>
+                By providing a risk-free method, Zariya paves women’s paths from being victims
+                <br> to being survivors with a right and will to justice.<br>
+          </p>
+        </hgroup>
+      </div>
+    </div>
+<hr>
 
-    Himmat encourages women to report the wrong doings and violence they face in day to day life<br>
-    By providing a risk-free method, Himmat paves women’s paths from being victims
-    <br> to being survivors with a right and will to justice.<br>
+<div class="col-lg-6">
+    <div class="marketing-hero">
 
+      <p class="marketing-hero-cta"><a class="cta-link" href="/connect/" > Connect </a></p>
+      <p class="marketing-hero-subtext">
+            Get a quick first-instance connection to a service provider who can guide you.You can connect with a
+                <br>legal expert, women’s bank representative, psychologist,medical practitioner
+                    <br> or Indian Police Service’s women’s units.
+      </p>
 
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="marketing-hero">
+
+      <p class="marketing-hero-cta"><a class="cta-link" href="/track/" > Track </a></p>
+      <p class="marketing-hero-subtext">
+          Zariya facilitates the transparency and accountability needed to challenge social stigma and corruption.We aim to expedite women’s
+          <br> justice processes. Here, you can track whether or not your needs are met. You will have to
+          <br> create an account for your record and case details to be maintained.
+      </p>
+
+    </div>
 </div>
 
-<div style="">
+<hr>
 
-<p> <a href="/submitreport/" > Report </a> anonymously and safely an incident of wrong doing or violence against women.<br>
-    Take the first step to exercise your rights</p>
-
-</div>
+<!--We believe that providing a gateway to report, access, connect and track are key process elements for enacting justice in the lives of survivors of gender-based violence.-->
 
 {% endblock %}
+

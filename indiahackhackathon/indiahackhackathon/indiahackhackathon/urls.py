@@ -23,6 +23,8 @@ urlpatterns = [
     url(r'^$', home, name="home"),
     url(r'^submitreport/$', submit, name="submit-report"),
     url(r'^complete/$', complete, name="complete"),
+    url(r'^connect/$', connect, name="connect"),
+    url(r'^track/$', track, name="track"),
 
 ]
 

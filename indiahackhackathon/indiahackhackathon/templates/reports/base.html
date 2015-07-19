@@ -9,22 +9,16 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
     <title>
-        {% block title %}
-        {% endblock %}
-
+        {% block title %} {% endblock %}
     </title>
 
-    {% block javascripts %}
-    {% endblock %}
+    {% block css %}{% endblock %}
 
-    {% block css %}
-
-    {% endblock %}
+    {% block javascripts %}{% endblock %}
 
 </head>
 <body>
-{% block main %}
-{% endblock %}
+{% block main %} {% endblock %}
 
 
 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>

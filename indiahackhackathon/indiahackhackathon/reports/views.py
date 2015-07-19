@@ -15,15 +15,21 @@ def submit(request):
     if request.method == 'POST':
         form = ReportForm(request.POST)
         if form.is_valid():
+
             return HttpResponseRedirect('/complete/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = ReportForm()
-
     return render(request, 'reports/form.html',{'form': form})
 
 
 
 def complete(request):
     return render(request, 'reports/complete.html')
+
+def connect(request):
+    return render(request, 'reports/underconstruction.html')
+
+def track(request):
+    return render(request, 'reports/underconstruction.html')
