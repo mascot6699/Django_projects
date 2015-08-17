@@ -8,7 +8,7 @@ from django.shortcuts import render_to_response
 from django.http import Http404
 
 def latest_post(request):
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
     try:
         post = BlogPost.objects.latest('date_posted')
     except BlogPost.DoesNotExist:

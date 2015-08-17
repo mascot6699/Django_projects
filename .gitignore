@@ -68,3 +68,7 @@ dist/
 
 # Staticfiles
 staticfiles/
+
+#sqllite db
+
+db.*

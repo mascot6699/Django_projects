@@ -1,7 +1,8 @@
-{% load threadedcomments_tags %}
+{% load comments %}
 
 <html>
 <head><title>{{ post.title }}</title></head>
+
 <body>
     <div id="blogpost">
         <h1>{{ post.title }}</h1>
@@ -9,11 +10,15 @@
         {{ post.body|linebreaks }}
     </div>
     <h3>Comments on This Post:</h3>
+    <h3>This is an example of non threaded tags</h3>
 
+{% get_comment_count for post as comment_count %}
 
-<h2>Comments for {{ object.title }}:</h2>
+there are {{ comment_count }} comments here.<br>
 
-{% render_comment_list for object %}
-{% render_comment_form for object %}
+{% render_comment_list for post %}
+
+{% render_comment_form for post %}
+
 </body>
 </html>
