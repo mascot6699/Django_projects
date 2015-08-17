@@ -71,4 +71,4 @@ staticfiles/
 
 #sqllite db
 
-db.*
+db.sqllite3
